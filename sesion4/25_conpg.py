@@ -9,10 +9,10 @@ con = None
 
 try:
 
-    con = psycopg2.connect("dbname='nuevos_datos' user='usuariopg' host='localhost' password='password'")
+    con = psycopg2.connect("dbname='nuevos_datos' user='pguser' host='localhost' password='pass'")
     cur = con.cursor()
     cur.execute('SELECT version()')
-    ver = cur.fetchone()
+    ver = cur.fetchall()
     print ver
 
 
